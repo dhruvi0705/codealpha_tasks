@@ -1,0 +1,120 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url("https://th.bing.com/th/id/OIP.PlbPoJvRkM6QX6Q80S0I4AHaEK?w=302&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7") no-repeat center/cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+:root{
+    --bg-color:#f2eaea;
+    --main-color:#d28fcd;
+    --text-color:#010101;
+    --2nd-color:#241010;
+    --other-color:#18032e66;
+    --big-font:5rem;
+    --h2-font: 2.3rem;
+    --p-font:1.3rem;
+}
+header{
+    position: fixed;
+    width:100%;
+    top:0;
+    right:0;
+    z-index: 1000;
+    background: var(--main-color);
+    box-shadow: 0 1px 6px 0 rgba(138, 193, 215, 0.525);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 14%;
+    transition: all .50s ease;
+}
+.logo img{
+    width:100%;
+    height:auto;
+}
+.navbar{
+    display:flex;
+}
+.navbar a {
+    color:var(--text-color);
+    font-size:19px;
+    font-weight: 500;
+    margin:10px 22px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color: var(--bg-color);
+}
+.h-icons{
+    display:flex;
+    align-items: center;
+}
+.h-icons i{
+    font-size: 25px;
+    color: var(--text-color);
+    margin-left: 5px;
+   margin-right: 20px;
+   transition : all .50s ease;
+}
+.h-icons i:hover{
+    transform:translateY(-4px);
+    color: var(--main-color);
+}
+#menu-icon{
+    height:30px;
+    width: 30px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size:20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index:10001;
+    display:none;
+}
+form{
+    background-color: rgba(158, 206, 209, 0.913);
+    padding: 46px;
+    text-align: center;
+    border-radius: 15px;
+    width: 400px;
+}
+form input{
+    display:block;
+    background:none;
+    margin: 18px auto;
+    padding: 10px;
+    text-align: center;
+    border: 3px solid #152115;
+    outline:none;
+    width:180px;
+    font-size: 20px;
+     color:rgb(63, 55, 45);
+    border-radius: 10px;
+}
+form input[type ="submit"]{
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: 800;
+    background-color: rgb(29, 168, 110);
+    border: 3px;
+    color: bisque;
+}
+form input[type ="submit"]:hover{
+    color:aqua;
+  
+}
+p{
+    color: red;
+    font-size: 17px;
+    font-weight: 450;
+}
+h1{
+    font-size: 40px;
+    color: rgb(2, 2, 26);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower shop login</title>
+    <link rel="stylesheet" href="login.css">
+    
+    
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png"  class="logo" alt="">
+        </a>
+
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="h-icons">
+            <a href="#"><i class='bx bxs-heart'></i></a>
+            <a href="#"><i class='bx bx-phone'></i></a>
+            <a href="#"><i class='bx bx-shopping-bag' ></i></a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+    <form action="/" method="GET">
+    <h1>Login / Sign in</h1>
+    <input id="username" type="text" name="username" placeholder="username" required>
+    <input id="password" type="password" name="password" placeholder="password" required>
+    
+    <p id ="errorMessage" hidden></p>
+      <input type="submit" value="SUBMIT">
+
+      <script>
+        const username = document.getElementById("username");
+          const password = document.getElementById("password");
+           const form = document.querySelector("form");
+          const errorMessage = document.getElementById("errorMessage");
+
+          form.addEventListener("submit",(e) =>{
+    const errors = [];
+          if(username.value.trim() === ""){
+        errors.push("Username required")
+       }
+     if(password.value.length < 4){
+        errors.push("Password must be atleast 4 chararcters")
+     }
+     if(password.value.length > 10){
+        errors.push("Password must be less than 10 chararcters")
+     }
+  if(errors.length > 0){
+        e.preventDefault();
+        errorMessage.toggleAttribute('hidden');
+        errorMessage.innerHTML =errors.join(', ');
+    }})
+
+      </script>
+ </form>
+  
+</body>
+</html>
